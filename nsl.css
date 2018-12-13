@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'GlacialIndifference';
+    src: url('fonts/GlacialIndifference-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  box-sizing: border-box;
+	display: flex;
+	flex-flow: column;
+	font-family: GlacialIndifference;
+	font-size: 16px;
+	height: 100%;
+  margin: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+  overflow-y: auto;
+}
+
+h1, h2, h3 {
+	text-align: center;
+}
+
+table {
+	width: 100%;
+}
+
+.section-a-top,
+.section-a-bottom {
+	display: flex;
+	text-align: center;
+}
+
+.section-a-top {
+	background: rgba( 107, 174, 214, 1 );
+}
+
+.section-a-middle {
+  display: flex;
+  flex: 1;
+  overflow-y: auto;
+	background: rgba( 247, 251, 255, 1 );
+}
+
+.section-b-left,
+.section-b-right {
+}
+
+.section-b-center {
+  flex: 1;
+	padding: 10px;
+}
