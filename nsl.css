@@ -1,24 +1,20 @@
 @font-face {
     font-family: 'GlacialIndifference';
-    src: url('fonts/GlacialIndifference-Regular.otf') format('opentype');
-    font-weight: normal;
     font-style: normal;
+    font-weight: normal;
+		src: url('fonts/GlacialIndifference-Regular.otf') format('opentype');
+}
+
+html {
+	font-family: GlacialIndifference;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-  box-sizing: border-box;
-	display: flex;
-	flex-flow: column;
-	font-family: GlacialIndifference;
-	font-size: 16px;
-	height: 100%;
-  margin: 0;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-  overflow-y: auto;
+	margin: 0;
+	padding: 0;
 }
 
 h1, h2, h3 {
@@ -29,28 +25,113 @@ table {
 	width: 100%;
 }
 
-.section-a-top,
-.section-a-bottom {
-	display: flex;
+/**
+ * Cross-object element selectors. These selectors contain helpful rules.
+ */
+
+.nsl-full {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.nsl-label {
+	color: white;
 	text-align: center;
 }
 
-.section-a-top {
-	background: rgba( 107, 174, 214, 1 );
+/*
+ * NSL.view.collection selectors and rules.
+ */
+
+.nsl-collection-container {
+  overflow: auto;
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 
-.section-a-middle {
-  display: flex;
-  flex: 1;
-  overflow-y: auto;
-	background: rgba( 247, 251, 255, 1 );
+.nsl-collection {
+  border-collapse: separate;
+  border-spacing: 1px;
+  display: table;
+  position: absolute;
 }
 
-.section-b-left,
-.section-b-right {
+.nsl-collection-body {
+  display: table-row-group;
 }
 
-.section-b-center {
-  flex: 1;
-	padding: 10px;
+.nsl-collection-cell {
+  display: table-cell;
+  padding: 5px;
+  position: absolute;
+  background: rgba( 33, 113, 181, 0.1 );
+  box-sizing: border-box;
+}
+
+/*
+ * NSL.view.dom.element.button selectors and rules.
+ */
+
+.nsl-element-button {
+	background: rgba( 33, 113, 181, 1 );
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	margin: 1px;
+	padding: 7px;
+	-webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.nsl-element-button:hover {
+	background: rgba( 8, 81, 156, 1 );
+}
+
+.nsl-element-button:active {
+	background: rgba( 8, 48, 107, 1 );
+}
+
+/*
+ * NSL.view.dom.structure.stage selectors and rules.
+ */
+
+.nsl-structure-stage {
+	box-sizing: border-box;
+	bottom: 0;
+	display: flex;
+	flex-flow: column;
+	left: 0;
+	overflow: auto;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.nsl-structure-stage-bottom,
+.nsl-structure-stage-middle,
+.nsl-structure-stage-top {
+	display: flex;
+}
+
+.nsl-structure-stage-center,
+.nsl-structure-stage-left,
+.nsl-structure-stage-right {
+	overflow-y: auto;
+}
+
+.nsl-structure-stage-center,
+.nsl-structure-stage-middle {
+	flex: 1;
+}
+
+.nsl-title {
+	text-align: center;
 }
